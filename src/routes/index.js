@@ -23,4 +23,38 @@ router.get("/rutaGR5", function(req, res) {
     res.send("Desde la ruta cinco, dejo este mensaje en la web desde el servidor");
 });
 
+router.post("/rutaPOST", (req, res) => {
+    console.log("Alguien ha accedido a la ruta POST");
+    res.send("Haciendo pruebas con la ruta POST");
+});
+
+router.post("/rutaPOSTconBody", (req, res) => {
+    req.body = "Probando con el request";
+    console.log(req.body);
+    res.json({
+        saludo: "Hola desde el JSON",
+    });
+});
+
+router.post("/rutaPOST2conBody", (req, res) => {
+    req.body = "Hola, usando el request";
+    console.log(req.body);
+    res.json({
+        Title: "Creacion de nueva ruta JSON",
+    });
+});
+
+router.post("/rutaPOST3", (req, res) => {
+    req.body = "Hola de nuevo";
+    console.log(req.body);
+    res.json({
+        Trabajo: "Proyecto Intermodular, probando con rutas POST"
+    })
+});
+
+router.post("/rutaPOSTult", (req, res) => {
+    console.log("Alguien ha accedido a la ruta POST");
+    res.send("Haciendo pruebas con POSTMAN");
+});
+   
 module.exports = router;

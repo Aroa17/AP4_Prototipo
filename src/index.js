@@ -1,7 +1,11 @@
 const express = require("express");
 const app = express();
+const morgan = require("morgan");
 
 app.set("port", process.env.PORT || 8080);
+
+// middleware
+app.use(morgan("dev"));
 
 //rutas
 app.use(require("./routes/index"));
