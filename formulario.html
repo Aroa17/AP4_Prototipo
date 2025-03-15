@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario POST</title>
+    </head>
+    <body>
+        <h1>PROYECTO INTERMODULAR</h1>
+        <h2>FORMULARIO POST</h2>
+        <p>Los campos marcados con un asterisco son obligatorios</p>
+        <form name="Formulario para envío a ruta POST" action="" method="post">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" id="nombre" required placeholder="Introduce tu nombre">
+            <label>Apellidos:</label>
+            <input type="text" name="apellidos" id="apellidos" required placeholder="Introduce tus apellidos"><br>
+            <label>Email:</label>
+            <input type="email" name="email" maxlength="30" id="email" required placeholder="Introduce tu email">
+            <label>Fecha de nacimiento</label>
+            <input type="date" name="fechadenacimiento" id="fechadenacimiento"/><br>
+            <label for="contraseña">Contraseña * </label>
+            <input type="password" name="contraseña" id="contraseña" required pattern="[a-zA-Z0-9-_.]{5,}" title="letras del alfabeto inglés, números, guión '-', subrayado '_', punto '.', mínimo cinco caracteres"/><br>
+            <label for="repetircontraseña"> Repetir contraseña * </label>
+            <input type="password" name="repetircontraseña" id="repetircontraseña" required pattern="[a-zA-Z0-9-_.]{4,}" title="letras del alfabeto inglés, números, guión '-', subrayado '_', punto '.', mínimo cinco caracteres"/><br>
+            <input type="submit" name="enviar" value="Enviar">
+        </form>
+    </body>
+</html>
+
+
+
